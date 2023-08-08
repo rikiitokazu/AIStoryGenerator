@@ -5,24 +5,24 @@ import styles from './welcome.style'
 
 import {icons, SIZES } from '../../../constants';
 
-const jobTypes = ["Full", "Part", "Contractor"]
+
 const Welcome = () => {
   const router = useRouter(); 
-
+  const [activeJobType, setActiveJobType] = useState("Full")
   return (
     <View>
       <View style={styles.container}>
-        <Text style = {styles.userName}>Hello...</Text>
-        <Text style = {styles.welcomeMessage}>Find your perfect job</Text>
+        <Text style = {styles.userName}>Welcome!</Text>
+        <Text style = {styles.welcomeMessage}>Read a book!</Text>
       </View>
 
       <View style={styles.searchContainer}>
         <View style = {styles.searchWrapper}>
           <TextInput 
             style = {styles.searchInput}
-            value = ""
+            value = ''
             onChange ={()=> {}}
-            placeholder ="What are you looking for"
+            placeholder ="Search a book..."
             />
         </View>
 
@@ -35,17 +35,7 @@ const Welcome = () => {
         </TouchableOpacity>
       </View>
 
-      <View style = {styles.tabsContainer}>
-          <FlatList 
-          data ={jobTypes}
-          renderItem={({ item }) => {
-            <TouchableOpacity>
-              <Text>{item}</Text>
-            </TouchableOpacity>
-          }}
-        />
-      </View>
-
+  
     </View>
   )
 }
