@@ -1,6 +1,6 @@
-# DALLEAPP
+# Automated Pictures for Short Stories
 
-Utilizing Open-AI's API to generate dynamic images to mimic illustrations you would see in stories.
+Utilizing Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations you would see in stories that contain no pictures. 
 Used MeaningCloud API to generate specific summaries of text that is pushed into the Open-AI's API prompt. Allows for quick, accurate, and automated results.
 
 # Tech Stack
