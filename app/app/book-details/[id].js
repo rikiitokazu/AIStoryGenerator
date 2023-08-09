@@ -1,6 +1,6 @@
 import {Text, View, SafeAreaView, ScrollView, ActivityIndicator, RefreshControl} from 'react-native';
 
-import { Stack, useRouter, useSearchParams } from 'expo-router';
+import { Stack, useRouter, useGlobalSearchParams } from 'expo-router';
 import { useCallback, useState, useEffect } from 'react';
 import axios from 'axios'
 
@@ -12,9 +12,10 @@ import { COLORS, icons, SIZES } from '../../constants'
 
 
 const JobDetails = () => {
-    const params = useSearchParams();
+    const params = useGlobalSearchParams();
     //gets specific book id
-    const id = params.id
+
+
     const router = useRouter();
     
     const [refreshing, setRefreshing] = useState(false); 
@@ -25,11 +26,14 @@ const JobDetails = () => {
     const [data, setData] = useState([])
     const [error, setErorr] = useState(null)
 
+    //iOS use ngrok
+    //web just use localhost:4000
+
     const fetchData = async () => {
         setLoading(true); 
-        if (params.id !== undefined) {
+        if (params !== undefined) {
             try{
-                const response = await axios.get(`http://localhost:4000/books/ids/${id}`);
+                const response = await axios.get(`https://c27b-23-242-185-233.ngrok-free.app/books/ids/${params.id}`);
                 setData(response.data)
                 setLoading(false)
     
