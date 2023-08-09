@@ -9,6 +9,6 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
 - Node.js and Express
 
 # To operate...
-- Need to retrieve and Open-AI API and MeaningCloud API key and store it in ./backend/.env as OPEN_AI_API_KEY and MC_API
+- Need to retrieve and Open-AI API and MeaningCloud API key and store it in ./backend/.env
 - expo-cli start --tunnel for iOS
 - npm start for web 
