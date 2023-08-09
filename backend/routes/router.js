@@ -4,6 +4,8 @@ const express = require('express')
 const router = express.Router()
 const schemas = require('../models/schemas')
 const { ObjectId } = require('mongodb');
+
+
 require('dotenv/config')
 
 router.post('/user', async (req, res) => {
@@ -77,29 +79,12 @@ router.get('/books/ids/:id', async (req, res) => {
 
 
 //Summarizing tool
-const fetchSummarizedData = async (formdata) => {
-    const requestOptions = {
-      method: 'POST',
-      body: formdata,
-      redirect: 'follow'
-    };
-    try {
-        const response = await axios.post("https://api.meaningcloud.com/summarization-1.0", requestOptions)
-        const status = response.status;
-        const body = response.data;
-        return { status, body }
-    } catch (error) {
-        throw error;
-    }
-    
-}
-
 router.post('/summarizer', async (req, res) => {
     const content = req.body;
     const formdata = new FormData();
     formdata.append("key", process.env.MC_API);
     formdata.append("txt", content.desc);
-    formdata.append("sentences", 2);
+    formdata.append("sentences", 1);
     
     const requestOptions = {
       method: 'POST',
@@ -120,6 +105,36 @@ router.post('/summarizer', async (req, res) => {
     }
 
 })
+
+
+//AI Image generation
+
+
+router.post('/testing', async (req, res) => {
+    const message = req.body;
+    const options = {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${process.env.OPEN_AI_API_KEY}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "prompt": message.msg,
+            "n": 1,
+            "size": "256x256",
+        })
+    }
+    try {
+        const response = await fetch('https://api.openai.com/v1/images/generations', options)
+        const dataPic = await response.json()
+        console.log(dataPic);
+        res.json({ photo: dataPic.data[0].url});
+    } catch (error) {
+        console.log(error); 
+        res.status(500).json({error: 'error occured'})
+    }
+})
+    
 
 
 
