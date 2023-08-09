@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TouchableOpacity, ActivityIndicator, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, ActivityIndicator, FlatList, Image } from 'react-native'
 import axios from 'axios'; 
 
 import styles from './booklist.style'
@@ -18,11 +18,14 @@ const BookList = () => {
 
   const [activeJobType, setActiveJobType] = useState("All")
 
-  
+ //iOS use ngrok
+ //web just use localhost:4000
+
+ 
   const getData = async (genre) => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`http://localhost:4000/books/genre/${genre}`)
+      const response = await axios.get(`https://c27b-23-242-185-233.ngrok-free.app/books/genre/${genre}`)
       setBookData(response.data)
       setIsLoading(false); 
     }
@@ -78,6 +81,7 @@ const BookList = () => {
           ))
         )}
       </View>
+        
     </View>
   )
 }

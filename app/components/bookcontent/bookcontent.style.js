@@ -17,13 +17,25 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.large,
   },
   logoImage: {
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "100%",
   },
   jobTitleBox: {
     marginTop: SIZES.small,
     justiyfContent: 'center',
     alignItems: 'center',
+  },
+  generatedImage: {
+    width: 256,
+    height: 256,
+    borderWidth:3,
+    borderColor: COLORS.black,
+    borderRadius: 10,
+  },
+  pictureContainer: {
+    flex:1, 
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     fontSize: SIZES.large,
