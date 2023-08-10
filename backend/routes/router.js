@@ -110,7 +110,7 @@ router.post('/summarizer', async (req, res) => {
 //AI Image generation
 
 
-router.post('/testing', async (req, res) => {
+router.post('/picture', async (req, res) => {
     const message = req.body;
     const options = {
         method: "POST",

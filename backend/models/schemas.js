@@ -6,7 +6,8 @@ const bookSchema = new Schema({
     title: {type:String},
     author: {type:String},
     story: {type:Array},
-    word_count: {type:Number}
+    word_count: {type:Number},
+    difficulty: {type:String}
 })
 
 const user = new Schema({
