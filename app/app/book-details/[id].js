@@ -33,7 +33,7 @@ const JobDetails = () => {
         setLoading(true); 
         if (params !== undefined) {
             try{
-                const response = await axios.get(`https://c27b-23-242-185-233.ngrok-free.app/books/ids/${params.id}`);
+                const response = await axios.get(`https://c7f5-23-242-185-233.ngrok-free.app/books/ids/${params.id}`);
                 setData(response.data)
                 setLoading(false)
     

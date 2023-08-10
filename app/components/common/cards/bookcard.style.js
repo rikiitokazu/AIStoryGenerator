@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  logImage: {
+  logoImage: {
     width: "70%",
     height: "70%",
   },
@@ -30,22 +30,27 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: SIZES.medium,
   },
-  jobName: {
+  title: {
     fontSize: SIZES.medium,
     fontFamily: "DMBold",
     color: COLORS.primary,
   },
-  jobType: {
+  author: {
     fontSize: SIZES.small + 2,
     fontFamily: "DMRegular",
-    color: COLORS.gray,
+    color: COLORS.black,
     marginTop: 3,
-    textTransform: "capitalize",
   },
   description_container: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: 'center',
+  },
+  wordCount: {
+    fontSize: SIZES.small,
+    fontFamily: "DMRegular",
+    color: COLORS.gray,
+    marginTop: 3,
   }
 });
 

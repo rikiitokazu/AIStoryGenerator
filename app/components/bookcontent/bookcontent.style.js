@@ -20,11 +20,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
-  jobTitleBox: {
-    marginTop: SIZES.small,
-    justiyfContent: 'center',
-    alignItems: 'center',
-  },
   generatedImage: {
     width: 256,
     height: 256,
@@ -32,14 +27,20 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black,
     borderRadius: 10,
   },
+  generating: {
+    fontSize: SIZES.large,
+    fontFamily: FONT.bold,
+    marginBottom: 10,
+    textAlign: 'center'
+  },
   pictureContainer: {
     flex:1, 
     justifyContent: 'center',
     alignItems: 'center'
   },
   title: {
-    fontSize: SIZES.large,
-    color: COLORS.primary,
+    fontSize: SIZES.xLarge,
+    color: COLORS.black,
     fontFamily: FONT.bold,
     textAlign: "center",
   },
@@ -52,16 +53,34 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  companyName: {
-    fontSize: SIZES.medium - 2,
-    color: COLORS.primary,
+
+  author: {
+    flex:1,
+    fontSize: SIZES.large-3,
+    color: COLORS.black,
+    fontFamily: FONT.medium,
+    marginBottom:SIZES.small+3,
+    marginTop:1, 
+    textAlign: 'center',
+  },
+  difficulty: {
+    fontSize: SIZES.small,
+    color: COLORS.black,
     fontFamily: FONT.medium,
     marginBottom:SIZES.small+3,
   },
-  locationBox: {
+  estimatedTime: {
+    fontSize: SIZES.small,
+    color: COLORS.black,
+    fontFamily: FONT.medium,
+    marginBottom:SIZES.small+3, 
+  },
+  bookDescription: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginBottom:20,
+    borderBottomWidth:1,
   },
   locationImage: {
     width: 14,

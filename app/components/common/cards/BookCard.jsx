@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import styles from './bookcard.style'
-
+import {images} from '../../../constants'
 
 const BookCard = ({ book, handleNavigate }) => {
   return (
@@ -12,20 +12,20 @@ const BookCard = ({ book, handleNavigate }) => {
     >
       <TouchableOpacity style = {styles.logoContainer}>
         <Image 
-        source = {{uri: "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg"}} 
+        source = {images.bookIcon} 
         resizeMode = "contain"
-        style = {styles.logImage}
+        style = {styles.logoImage}
         />
       </TouchableOpacity>
 
 
         <View style = {styles.textContainer}>
-          <Text style = {styles.jobName} numberOfLines={1}>
+          <Text style = {styles.title} numberOfLines={1}>
             {book.title}
           </Text>
           <View style = {styles.description_container}>
-          <Text style = {styles.jobType}>{book.author}</Text>
-          <Text>Word Count: {book.word_count}</Text>
+            <Text style = {styles.author}>{book.author}</Text>
+            <Text style = {styles.wordCount}>Word Count: {book.word_count}</Text>
           </View>
         </View>
 

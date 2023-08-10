@@ -8,7 +8,7 @@ import { COLORS, SIZES } from '../../../constants';
 import BookCard from '../../common/cards/BookCard';
 
 
-const jobTypes = ["All", "Fiction", "Non-Fiction", "Fantasy", "Adventure"]
+const genres = ["All", "Fiction", "Non-Fiction", "Fantasy", "Adventure", "Mystery", "Romance", "Sci-Fi", "Self-help", "Humor"]
 
 const BookList = () => {
   const router = useRouter();
@@ -16,16 +16,17 @@ const BookList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const [activeJobType, setActiveJobType] = useState("All")
+  //default state
+  const [activeGenre, setActiveGenre] = useState("All")
 
  //iOS use ngrok
- //web just use localhost:4000
+ //web just use http://localhost:4000
 
  
   const getData = async (genre) => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`https://c27b-23-242-185-233.ngrok-free.app/books/genre/${genre}`)
+      const response = await axios.get(`https://c7f5-23-242-185-233.ngrok-free.app/books/genre/${genre}`)
       setBookData(response.data)
       setIsLoading(false); 
     }
@@ -38,8 +39,8 @@ const BookList = () => {
 
 
   useEffect(() => {
-    getData(activeJobType)
-  }, [activeJobType])
+    getData(activeGenre)
+  }, [activeGenre])
 
 
   return (
@@ -47,16 +48,14 @@ const BookList = () => {
 
       <View style = {styles.tabsContainer}>
           <FlatList 
-          data ={jobTypes}
+          data ={genres}
           renderItem={({ item }) => {
             return (
-            <TouchableOpacity style = {styles.tab(activeJobType, item)}
+            <TouchableOpacity style = {styles.tab(activeGenre, item)}
             onPress = {() => {
-              setActiveJobType(item);
-              
-              //router.push(`/search/${item}`)
+              setActiveGenre(item);
             }}>
-              <Text style = {styles.tabText(activeJobType, item)}>{item}</Text>
+              <Text style = {styles.tabText(activeGenre, item)}>{item}</Text>
             </TouchableOpacity>
             )
           }}
@@ -70,7 +69,7 @@ const BookList = () => {
         {isLoading ? (
           <ActivityIndicator size='large' color={COLORS.primary} />
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text>Books unavailable</Text>
         ) : (
           bookData?.map((book) => (
             <BookCard

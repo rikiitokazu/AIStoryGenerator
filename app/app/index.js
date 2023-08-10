@@ -33,9 +33,7 @@ const Home = () => {
                     flex:1, 
                     padding:SIZES.medium
                 }}>
-                <Welcome 
-                
-                />
+                <Welcome/>
 
                 <BookList />
 
