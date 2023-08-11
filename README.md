@@ -8,7 +8,7 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
 - MongoDB (to store books and user information)
 - Node.js and Express
 
-# To operate...
-- Need to retrieve and Open-AI API and MeaningCloud API key and store it in ./backend/.env
-- expo-cli start --tunnel for iOS
-- npm start for web 
+# To operate
+- Retrieve an Open-AI API and MeaningCloud API key and store it in ./backend/.env
+- For iOS, install ngrok and create a temporary url connected to backend localhost. Then use expo-cli start --tunnel.
+- npm start for web.
