@@ -27,13 +27,13 @@ const JobDetails = () => {
     const [error, setErorr] = useState(null)
 
     //iOS use ngrok
-    //web just use localhost:4000
+    //web just use http://localhost:4000
 
     const fetchData = async () => {
         setLoading(true); 
         if (params !== undefined) {
             try{
-                const response = await axios.get(`https://c7f5-23-242-185-233.ngrok-free.app/books/ids/${params.id}`);
+                const response = await axios.get(`https://4ab9-23-242-185-233.ngrok-free.app/books/ids/${params.id}`);
                 setData(response.data)
                 setLoading(false)
     
