@@ -1,6 +1,6 @@
 # About this project
 
-Programmed a mobile application using Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations for stories that do not have illustrations.
+Programmed a mobile application using Open-AI's API (DALL-E model) to generate dynamic images for stories that do not have illustrations.
 
 Used MeaningCloud API to generate specific summaries of text that is pushed into the Open-AI's API prompt. Allows for quick, accurate, and automated results.
 
@@ -19,7 +19,7 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
    ```
 - For iOS, install ngrok and create a temporary url connected to backend localhost. Then use...
   ```js
-   expo-cli start --tunnel
+  expo-cli start --tunnel
    ```
 - For web/android emulators...
     ```js
