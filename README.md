@@ -1,6 +1,6 @@
-# Automated Pictures for Short Stories
+# About this project
 
-Utilizing Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations you would see in stories that contain no pictures. 
+Utilizing Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations for stories that do not have illustrations
 Used MeaningCloud API to generate specific summaries of text that is pushed into the Open-AI's API prompt. Allows for quick, accurate, and automated results.
 
 # Tech Stack
@@ -11,7 +11,7 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
 # To operate
 - Retrieve an Open-AI API and MeaningCloud API key and store it in ./backend/.env
   ```js
-   const OPEN_AI_KEY = 'ENTER YOUR API';
+  const OPEN_AI_API = 'ENTER YOUR API';
    ```
     ```js
    const MC_API = 'ENTER YOUR API';
@@ -24,3 +24,10 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
     ```js
    npm start
    ```
+
+# Roadmap
+- [x] Include more genres
+- [x] Increase accuracy/consistency of images
+- [x] Include more books
+- [ ] Include a component where a user can input prompts for a customizable story
+- [ ] Add user component that allows pdfs to be extracted
