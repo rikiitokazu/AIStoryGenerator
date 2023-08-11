@@ -111,7 +111,8 @@ router.post('/summarizer', async (req, res) => {
 
 
 router.post('/picture', async (req, res) => {
-    const message = req.body;
+    const message = req.body
+    const enhancedImg = "Black and white, like a story's illustration of: " + message.msg
     const options = {
         method: "POST",
         headers: {
@@ -119,9 +120,9 @@ router.post('/picture', async (req, res) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            "prompt": message.msg,
+            "prompt": enhancedImg,
             "n": 1,
-            "size": "256x256",
+            "size": "512x512",
         })
     }
     try {
