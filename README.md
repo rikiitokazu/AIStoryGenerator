@@ -1,6 +1,7 @@
 # About this project
 
-Utilizing Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations for stories that do not have illustrations
+Programmed a mobile application using Open-AI's API (DALL-E model) to generate dynamic images to mimic illustrations for stories that do not have illustrations.
+
 Used MeaningCloud API to generate specific summaries of text that is pushed into the Open-AI's API prompt. Allows for quick, accurate, and automated results.
 
 # Tech Stack
