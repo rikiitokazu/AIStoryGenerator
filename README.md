@@ -10,5 +10,17 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
 
 # To operate
 - Retrieve an Open-AI API and MeaningCloud API key and store it in ./backend/.env
-- For iOS, install ngrok and create a temporary url connected to backend localhost. Then use expo-cli start --tunnel.
-- npm start for web.
+  ```js
+   const OPEN_AI_KEY = 'ENTER YOUR API';
+   ```
+    ```js
+   const MC_API = 'ENTER YOUR API';
+   ```
+- For iOS, install ngrok and create a temporary url connected to backend localhost. Then use...
+  ```js
+   expo-cli start --tunnel
+   ```
+- For web/android emulators...
+    ```js
+   npm start
+   ```
