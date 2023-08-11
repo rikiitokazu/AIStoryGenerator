@@ -6,14 +6,14 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
   },
-  userName: {
+  header: {
     fontFamily: FONT.regular,
-    fontSize: SIZES.xLarge,
+    fontSize: SIZES.xLarge+3,
     color: COLORS.secondary,
   },
   welcomeMessage: {
     fontFamily: FONT.bold,
-    fontSize: SIZES.large,
+    fontSize: SIZES.medium+2,
     color: COLORS.primary,
     marginTop: 2,
   },

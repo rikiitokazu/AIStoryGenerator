@@ -26,7 +26,7 @@ const BookList = () => {
   const getData = async (genre) => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`https://c7f5-23-242-185-233.ngrok-free.app/books/genre/${genre}`)
+      const response = await axios.get(`https://4ab9-23-242-185-233.ngrok-free.app/books/genre/${genre}`)
       setBookData(response.data)
       setIsLoading(false); 
     }

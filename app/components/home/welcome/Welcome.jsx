@@ -9,7 +9,7 @@ const Welcome = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style = {styles.userName}>Welcome back!</Text>
+        <Text style = {styles.header}>Welcome back!</Text>
         <Text style = {styles.welcomeMessage}>Read from any of these books with captivating illustrations!</Text>
         <Text style = {styles.description}>Programmed with Open-AI and MeaningfulCloud</Text>
       </View>

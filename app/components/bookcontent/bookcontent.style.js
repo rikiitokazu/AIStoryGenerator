@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   generatedImage: {
-    width: 256,
-    height: 256,
-    borderWidth:3,
+    width: 300,
+    height: 420,
+    borderWidth:2,
     borderColor: COLORS.black,
     borderRadius: 10,
+    marginVertical: 25, 
   },
   generating: {
     fontSize: SIZES.large,
@@ -34,7 +35,6 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   pictureContainer: {
-    flex:1, 
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -46,12 +46,6 @@ const styles = StyleSheet.create({
   },
   content: {
     marginBottom: SIZES.small,
-  },
-  companyInfoBox: {
-    marginTop: SIZES.small / 2,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
   },
 
   author: {
@@ -81,17 +75,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom:20,
     borderBottomWidth:1,
-  },
-  locationImage: {
-    width: 14,
-    height: 14,
-    tintColor: COLORS.gray,
-  },
-  locationName: {
-    fontSize: SIZES.medium - 2,
-    color: COLORS.gray,
-    fontFamily: FONT.regular,
-    marginLeft: 2,
   },
 });
 

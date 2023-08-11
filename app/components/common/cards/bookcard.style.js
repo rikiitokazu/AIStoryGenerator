@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
   },
   author: {
-    fontSize: SIZES.small + 2,
+    fontSize: SIZES.small,
     fontFamily: "DMRegular",
     color: COLORS.black,
     marginTop: 3,

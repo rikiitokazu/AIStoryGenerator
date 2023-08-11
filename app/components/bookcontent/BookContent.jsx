@@ -11,17 +11,17 @@ const BookContent = ({ data }) => {
   const [error, setError] = useState(null); 
 
  //iOS use ngrok
- //web just use localhost:4000
+ //web just use http://localhost:4000
   
   const fetchData = async () => {
     if (data) {
       const len = data.story.length
       //if i is less than two, we have to do something about it
-      for (let i = 2; i < len; i+=11) {
+      for (let i = 2; i < len; i+=4) {
         try{
-          const response = await axios.post(`https://c7f5-23-242-185-233.ngrok-free.app/summarizer`, {desc: data.story[i]})
+          const response = await axios.post(`https://4ab9-23-242-185-233.ngrok-free.app/summarizer`, {desc: data.story[i]})
           console.log(response.data.summary)
-          const picResponse = await axios.post(`https://c7f5-23-242-185-233.ngrok-free.app/picture`, {msg: response.data.summary})
+          const picResponse = await axios.post(`https://4ab9-23-242-185-233.ngrok-free.app/picture`, {msg: response.data.summary})
           data.story.splice(i+1, 0, picResponse.data.photo)
           await new Promise((resolve) => setTimeout(resolve, 1000));
         }
@@ -58,13 +58,15 @@ const BookContent = ({ data }) => {
 
           <View>
             {data.story.map((paragraph, index) => (
-              <View  key = {index}>
+              <View style = {styles.pictureContainer} key = {index}>
                 {paragraph.startsWith('https://') ? (
-                <Image
-                  source={{ uri: paragraph }}
-                  style = {styles.generatedImage}
-                  resizeMode='contain'
-                />)  : (
+                
+                  <Image
+                    source={{ uri: paragraph }}
+                    style = {styles.generatedImage}
+                    resizeMode='stretch'
+                  />
+                )  : (
                 <Text style = {styles.content}>{paragraph}</Text>
                  )}
               </View>
