@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 
 // home screen
@@ -28,25 +27,3 @@ export {
   Specifics,
   NearbyJobCard
 };
-=======
-import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
-
-// home screen
-import Welcome from "./home/welcome/Welcome";
-import BookList from "./home/booklist/BookList";
-
-
-// job details screen
-import BookContent from "./bookcontent/BookContent";
-
-// common
-import BookCard from "./common/cards/BookCard";
-
-export {
-  ScreenHeaderBtn,
-  Welcome,
-  BookList,
-  BookContent,
-  BookCard
-};
->>>>>>> 2eb1148f844d053d2c830dec6878fd8efd7fd71c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
 import { useRouter } from 'expo-router';
@@ -51,25 +50,5 @@ const Welcome = () => {
   )
 }
 
-=======
-import React from 'react'
-import { View, Text } from 'react-native'
-import styles from './welcome.style'
 
-
-
-
-const Welcome = () => {
-  return (
-    <View>
-      <View style={styles.container}>
-        <Text style = {styles.header}>Welcome back!</Text>
-        <Text style = {styles.welcomeMessage}>Read from any of these books with captivating illustrations!</Text>
-        <Text style = {styles.description}>Programmed with Open-AI and MeaningfulCloud</Text>
-      </View>
-    </View>
-  )
-}
-
->>>>>>> 2eb1148f844d053d2c830dec6878fd8efd7fd71c
 export default Welcome
