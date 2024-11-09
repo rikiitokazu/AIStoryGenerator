@@ -17,7 +17,7 @@ Used MeaningCloud API to generate specific summaries of text that is pushed into
     ```js
    const MC_API = 'ENTER YOUR API';
    ```
-- For iOS, install ngrok and create a temporary url connected to backend localhost. Then use...
+- For iOS, install ngrok to create backend localhost. Then use...
   ```js
   expo-cli start --tunnel
    ```
